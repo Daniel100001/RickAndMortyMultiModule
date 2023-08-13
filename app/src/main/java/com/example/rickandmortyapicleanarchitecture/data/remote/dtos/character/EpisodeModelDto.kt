@@ -4,7 +4,6 @@ import com.example.rickandmortyapicleanarchitecture.domain.models.EpisodeModel
 import com.google.gson.annotations.SerializedName
 
 data class EpisodeModelDto(
-
     @SerializedName("id")
     val id: Int,
 

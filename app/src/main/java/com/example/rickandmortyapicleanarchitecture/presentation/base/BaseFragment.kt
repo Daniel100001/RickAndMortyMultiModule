@@ -1,4 +1,4 @@
-package com.example.rickandmortyapicleanarchitecture.base
+package com.example.rickandmortyapicleanarchitecture.presentation.base
 
 import android.os.Bundle
 import android.view.View

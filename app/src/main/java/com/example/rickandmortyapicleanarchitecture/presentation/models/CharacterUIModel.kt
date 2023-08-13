@@ -1,5 +1,6 @@
 package com.example.rickandmortyapicleanarchitecture.presentation.models
 
+import com.example.rickandmortyapicleanarchitecture.data.local.room.entity.CharacterModelEntity
 import com.example.rickandmortyapicleanarchitecture.domain.models.CharacterModel
 
 data class CharacterUIModel(
@@ -20,7 +21,7 @@ data class CharacterUIModel(
 
 ) : java.io.Serializable
 
-fun CharacterModel.toUI() = CharacterUIModel(
+fun CharacterModel.toUI() = CharacterModelEntity(
     id, name, image, status, species, type, gender
 )
 

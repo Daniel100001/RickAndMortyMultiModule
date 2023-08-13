@@ -1,4 +1,4 @@
-package com.example.rickandmortyapicleanarchitecture.domain.usecase
+package com.example.rickandmortyapicleanarchitecture.domain.usecase.remote
 
 import com.example.rickandmortyapicleanarchitecture.domain.repositories.CharacterRepository
 import javax.inject.Inject

@@ -8,7 +8,7 @@ import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bumptech.glide.Glide
 import com.example.rickandmortyapicleanarchitecture.R
-import com.example.rickandmortyapicleanarchitecture.base.BaseFragment
+import com.example.rickandmortyapicleanarchitecture.presentation.base.BaseFragment
 import com.example.rickandmortyapicleanarchitecture.databinding.FragmentCharacterDetailBinding
 import com.example.rickandmortyapicleanarchitecture.domain.either.Either
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,5 +1,6 @@
 package com.example.rickandmortyapicleanarchitecture.presentation.ui.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -9,7 +10,8 @@ import com.bumptech.glide.Glide
 import com.example.rickandmortyapicleanarchitecture.databinding.ItemCharacterBinding
 import com.example.rickandmortyapicleanarchitecture.domain.models.CharacterModel
 
-class CharacterAdapter(private val onItemClick: (id: Int) -> Unit) :
+class CharacterAdapter(private val deleteCharacter: (characterModel: CharacterModel) -> Unit,
+    private val updateCharacter: (characterModel:CharacterModel) -> Unit) :
     ListAdapter<CharacterModel, CharacterAdapter.ViewHolder>(DiffUtilCallback()) {
 
     inner class ViewHolder(private val binding: ItemCharacterBinding) :
@@ -17,7 +19,15 @@ class CharacterAdapter(private val onItemClick: (id: Int) -> Unit) :
 
         init {
             itemView.setOnClickListener {
-                onItemClick(absoluteAdapterPosition)
+                getItem(absoluteAdapterPosition)?.let {
+                    deleteCharacter(it)
+                    Log.e("dan",it.name)
+                }
+            }
+            binding.updateButton.setOnClickListener {
+                getItem(absoluteAdapterPosition)?.let {
+                    updateCharacter(it)
+                }
             }
         }
 
@@ -28,7 +38,7 @@ class CharacterAdapter(private val onItemClick: (id: Int) -> Unit) :
             binding.itemCharacterSpecies.text = characterModel?.species
             binding.itemCharacterStatus.text = characterModel?.status
             binding.location.text = characterModel?.type
-            binding.gender.text = characterModel?.gender
+
         }
     }
 

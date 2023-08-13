@@ -4,7 +4,6 @@ import com.example.rickandmortyapicleanarchitecture.domain.models.CharacterModel
 import com.google.gson.annotations.SerializedName
 
 data class CharacterModelDto(
-
     @SerializedName("id")
     val id: Int,
 
@@ -25,7 +24,6 @@ data class CharacterModelDto(
 
     @SerializedName("gender")
     val gender: String
-
 ) : java.io.Serializable
 
 fun CharacterModelDto.toDomain() = CharacterModel(

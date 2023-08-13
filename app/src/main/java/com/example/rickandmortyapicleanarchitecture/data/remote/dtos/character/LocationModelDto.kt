@@ -4,7 +4,6 @@ import com.example.rickandmortyapicleanarchitecture.domain.models.LocationModel
 import com.google.gson.annotations.SerializedName
 
 data class LocationModelDto(
-
     @SerializedName("id")
     val id: Int,
 

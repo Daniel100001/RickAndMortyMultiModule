@@ -92,27 +92,14 @@
         app:layout_constraintStart_toEndOf="@+id/item_character_image"
         app:layout_constraintTop_toBottomOf="@+id/last_know_location" />
 
-    <TextView
-        android:id="@+id/first_seen_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="7dp"
-        android:elevation="1dp"
-        android:text="First seen in:"
-        android:textColor="@color/white"
+        android:text="UpdateMe"
+        app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
         app:layout_constraintStart_toEndOf="@+id/item_character_image"
-        app:layout_constraintTop_toBottomOf="@id/location" />
-
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:elevation="1dp"
-        android:text="Lawnmower Dog"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/item_character_image"
-        app:layout_constraintTop_toBottomOf="@id/first_seen_in" />
+        app:layout_constraintTop_toBottomOf="@+id/location" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

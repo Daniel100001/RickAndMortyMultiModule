@@ -3,7 +3,6 @@ package com.example.rickandmortyapicleanarchitecture.data.remote.dtos.character
 import com.google.gson.annotations.SerializedName
 
 data class Info(
-
     @SerializedName("count")
     val count: Int,
 

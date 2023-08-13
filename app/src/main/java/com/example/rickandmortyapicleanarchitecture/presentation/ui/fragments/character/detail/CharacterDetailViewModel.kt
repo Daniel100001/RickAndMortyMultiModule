@@ -1,7 +1,7 @@
 package com.example.rickandmortyapicleanarchitecture.presentation.ui.fragments.character.detail
 
 import androidx.lifecycle.ViewModel
-import com.example.rickandmortyapicleanarchitecture.domain.usecase.FetchSingleCharacterUseCase
+import com.example.rickandmortyapicleanarchitecture.domain.usecase.remote.FetchSingleCharacterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
