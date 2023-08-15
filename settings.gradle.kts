@@ -15,3 +15,8 @@ dependencyResolutionManagement {
 rootProject.name = "RickAndMortyApiCleanArchitecture"
 include (":app")
 
+include(":data")
+include(":presentation")
+include(":domain")
+include(":common")
+include(":utils")

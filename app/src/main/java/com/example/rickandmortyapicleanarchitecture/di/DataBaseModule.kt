@@ -2,7 +2,7 @@ package com.example.rickandmortyapicleanarchitecture.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.rickandmortyapicleanarchitecture.data.local.room.DataBase
+import com.example.data.data.local.room.DataBase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,6 +13,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object DataBaseModule {
+
     @Provides
     @Singleton
     fun provideRickAndMortyDataBase(@ApplicationContext context: Context) = Room.databaseBuilder(

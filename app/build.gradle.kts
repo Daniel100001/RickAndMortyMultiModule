@@ -6,9 +6,6 @@ plugins {
     //
     kotlin("android")
 
-    // safeargs
-    id("androidx.navigation.safeargs")
-
     // kapt
     id("kotlin-kapt")
 
@@ -69,7 +66,7 @@ dependencies {
 
     // UI components
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.paging:paging-runtime-ktx:3.1.1")
+    implementation("androidx.paging:paging-runtime-ktx:3.2.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     // Activity
@@ -77,11 +74,11 @@ dependencies {
     implementation("androidx.activity:activity-ktx:$activity_version")
 
     // Fragment
-    val fragment_version = "1.5.5"
+    val fragment_version = "1.6.1"
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
 
     // Lifecycle
-    val lifecycle_version = "2.5.1"
+    val lifecycle_version = "2.6.1"
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     // Lifecycles only (without ViewModel or LiveData)
@@ -97,27 +94,14 @@ dependencies {
     val paging_version = "3.1.1"
     implementation("androidx.paging:paging-common-ktx:$paging_version")
 
-    // nav_graph
-    val navVersion = "2.6.0"
-
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-
-    //Glide
-    implementation("com.github.bumptech.glide:glide:4.15.1")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.15.0")
-
-    //Retrofit 2
+    // Retrofit 2
     val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
-    // ViewBindingPropertyDelegate
-    val view_binding_property_delegate = "1.5.8"
-    implementation("com.github.kirich1409:viewbindingpropertydelegate:$view_binding_property_delegate")
+    // Hilt
+    val hilt_version = "2.46"
 
-    //hilt
-    val hilt_version = "2.45"
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
 
@@ -126,9 +110,18 @@ dependencies {
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
-    //Room
+    // Room
     val room_version = "2.5.2"
+
     implementation("androidx.room:room-ktx:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
+
+    // Data
+    implementation(project(":data"))
+
+    // Presentation
+    implementation(project(":presentation"))
+
+
 
 }

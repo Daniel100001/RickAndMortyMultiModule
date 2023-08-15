@@ -1,6 +1,6 @@
 package com.example.rickandmortyapicleanarchitecture.di
 
-import com.example.rickandmortyapicleanarchitecture.data.remote.apiservices.CharacterApiService
+import com.example.data.data.remote.apiservices.CharacterApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,6 +35,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideCharacterApiService(retrofit: Retrofit): CharacterApiService =
+    fun provideCharacterApiService(retrofit: Retrofit) : CharacterApiService =
         retrofit.create(CharacterApiService::class.java)
 }

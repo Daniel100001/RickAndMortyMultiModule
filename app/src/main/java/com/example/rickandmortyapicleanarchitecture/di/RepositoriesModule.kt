@@ -1,9 +1,9 @@
 package com.example.rickandmortyapicleanarchitecture.di
 
-import com.example.rickandmortyapicleanarchitecture.data.repositories.CharacterRepositoryImpl
-import com.example.rickandmortyapicleanarchitecture.domain.either.Either
-import com.example.rickandmortyapicleanarchitecture.domain.models.CharacterModel
-import com.example.rickandmortyapicleanarchitecture.domain.repositories.CharacterRepository
+import com.example.data.data.repositories.CharacterRepositoryImpl
+import com.example.domain.domain.either.Either
+import com.example.domain.domain.models.CharacterModel
+import com.example.domain.domain.repositories.CharacterRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
