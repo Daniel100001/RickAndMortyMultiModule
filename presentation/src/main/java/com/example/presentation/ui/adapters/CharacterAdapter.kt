@@ -21,13 +21,13 @@ class CharacterAdapter(private val deleteCharacter: (characterModel: CharacterMo
 
         init {
             itemView.setOnClickListener {
-                getItem(absoluteAdapterPosition)?.let {
+                getItem(adapterPosition)?.let {
                     deleteCharacter(it)
                     Log.e("dan",it.name)
                 }
             }
             binding.updateButton.setOnClickListener {
-                getItem(absoluteAdapterPosition)?.let {
+                getItem(adapterPosition)?.let {
                     updateCharacter(it)
                 }
             }

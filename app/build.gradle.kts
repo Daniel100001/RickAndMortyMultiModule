@@ -9,6 +9,7 @@ plugins {
     // kapt
     id("kotlin-kapt")
 
+
     // hilt
     id("com.google.dagger.hilt.android")
 }
@@ -122,6 +123,8 @@ dependencies {
     // Presentation
     implementation(project(":presentation"))
 
+}
 
-
+kapt{
+    correctErrorTypes = true
 }

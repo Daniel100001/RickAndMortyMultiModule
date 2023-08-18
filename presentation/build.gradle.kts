@@ -5,6 +5,9 @@ plugins {
     // kapt
     id("kotlin-kapt")
 
+    id("androidx.navigation.safeargs")
+
+
     // hilt
     id("com.google.dagger.hilt.android")
 }
@@ -49,11 +52,6 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    // UI components
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.paging:paging-runtime-ktx:3.2.0")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     // nav_graph
     val navVersion = "2.6.0"

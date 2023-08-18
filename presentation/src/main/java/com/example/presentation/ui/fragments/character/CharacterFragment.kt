@@ -24,14 +24,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class CharacterFragment @Inject constructor(
-    private val characterMapperUi: Mapper<CharacterModel, CharacterUIModel>
-) :
+class CharacterFragment :
     BaseFragment<FragmentCharacterBinding, CharacterViewModel>(R.layout.fragment_character) {
     override val binding by viewBinding(FragmentCharacterBinding::bind)
     override val viewModel by viewModels<CharacterViewModel>()
     private val characterAdapter = CharacterAdapter(this::deleteCharacter,this::updateCharacter)
-
+    @Inject
+    lateinit var characterMapperUI: Mapper<CharacterModel, CharacterUIModel>
 
     private fun updateCharacter(characterModel: CharacterModel) {
         viewModel.updateCharacter(characterModel)
@@ -76,7 +75,7 @@ class CharacterFragment @Inject constructor(
                                     binding.recyclerView.visibility = View.VISIBLE
                                     binding.progressBar.isVisible = false
                                     characterAdapter.submitList(it.data.map { it1 ->
-                                        characterMapperUi.fromModel(it1)
+                                        characterMapperUI.fromModel(it1)
                                     })
                                 }
                             }
